@@ -1,0 +1,40 @@
+/* 按钮容器样式，用于控制按钮的布局 */
+.button-container {
+  display: flex;
+  /* 改成 space-between，两端对齐更规整；想让按钮间距均匀且两边不留空白，也可用 space-evenly */
+  justify-content: space-between; 
+  align-items: center;
+  /* 给容器设最小高度，让按钮垂直居中更明显，可根据需求改 */
+  min-height: 50vh; 
+  /* 让按钮在一行放不下时，自动换行且换行后也能均匀分布 */
+  flex-wrap: wrap; 
+  /* 给容器加内边距，避免按钮贴边 */
+  padding: 0 10px; 
+  /* 可选：限制容器最大宽度，让按钮在大屏下也不会太分散 */
+  max-width: 1200px; 
+  /* 让容器水平居中，适配不同屏幕 */
+  margin: 0 auto; 
+}
+
+/* 按钮通用样式 */
+.btn {
+  display: inline-block;
+  font-size: 16px;
+  padding: 12px 24px;
+  background-color: #00a2ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  width: 120px; 
+  text-align: center;
+  /* 给按钮设 margin，让换行后也有间距（配合 flex-wrap 使用） */
+  margin-bottom: 10px; 
+  /* 按钮固定宽高时，用 flex-shrink: 0 避免被压缩变形 */
+  flex-shrink: 0; 
+}
+
+.btn:hover {
+  background-color: #0081cc;
+}
